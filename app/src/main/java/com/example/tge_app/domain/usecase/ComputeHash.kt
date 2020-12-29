@@ -2,10 +2,8 @@ package com.example.tge_app.domain.usecase
 
 import java.security.MessageDigest
 
-class computeHash (
-    val password: String
-){
-    suspend fun sha256(password: String): String {
+class ComputeHash {
+    public fun Crypto(password: String): String {
         return hashString(password, "SHA-256")
     }
 

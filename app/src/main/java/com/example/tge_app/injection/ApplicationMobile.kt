@@ -2,26 +2,25 @@ package com.example.tge_app.injection
 
 import android.content.Context
 import androidx.room.Room
+import com.example.projetandroid4a.domain.usecase.CreateUserUseCase
 import com.example.tge_app.data.local.AppDatabase
 import com.example.tge_app.data.local.DatabaseDao
 import com.example.tge_app.data.repository.UserRepository
-import com.example.tge_app.domain.usecase.CreateUserUseCase
+import com.example.tge_app.domain.usecase.ComputeHash
 import com.example.tge_app.domain.usecase.GetUserUseCase
-import com.example.tge_app.domain.usecase.computeHash
 import com.example.tge_app.presentation.main.MainViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.module.Module
 import org.koin.dsl.module
-import java.security.AccessControlContext
 
 val presentationModule = module {
-    factory { MainViewModel(get(),get()) }
+    factory { MainViewModel(get(),get(),get()) }
 }
 
 val domainModule : Module = module{
     factory { CreateUserUseCase(get()) }
     factory { GetUserUseCase(get()) }
-    factory { computeHash(get()) }
+    single { ComputeHash() }
 }
 
 val dataModule : Module = module{
