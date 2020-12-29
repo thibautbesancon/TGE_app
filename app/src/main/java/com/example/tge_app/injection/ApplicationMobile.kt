@@ -6,6 +6,7 @@ import com.example.tge_app.data.local.AppDatabase
 import com.example.tge_app.data.local.DatabaseDao
 import com.example.tge_app.data.repository.UserRepository
 import com.example.tge_app.domain.usecase.CreateUserUseCase
+import com.example.tge_app.domain.usecase.GetUserUseCase
 import com.example.tge_app.presentation.main.MainViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.module.Module
@@ -13,15 +14,16 @@ import org.koin.dsl.module
 import java.security.AccessControlContext
 
 val presentationModule = module {
-    factory { MainViewModel(get()) }
+    factory { MainViewModel(get(),get()) }
 }
 
 val domainModule : Module = module{
     factory { CreateUserUseCase(get()) }
+    factory { GetUserUseCase(get()) }
 }
 
 val dataModule : Module = module{
-    single { UserRepository() }
+    single { UserRepository(get()) }
     single { createDataBase(androidContext()) }
 
 }
