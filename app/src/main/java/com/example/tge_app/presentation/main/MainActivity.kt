@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import com.example.tge_app.R
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
 
@@ -15,8 +16,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        mainViewModel.loginLiveData.observe(this, Observer {
+            when(it){
+                is LoginSuccess->{
+                    //TODO
+                }
+                LoginError->{
+                    MaterialAlertDialogBuilder(this)
+                        .setMessage("Login ou password incorrect")
+                        .setPositiveButton("OK") { dialog, which ->
+                            dialog.dismiss()
+                        }
+                        .show()
+                     }
+            }
+        })
         login_button.setOnClickListener {
-            mainViewModel.onClickedIncrement("")
+            mainViewModel.onClickedLogin(login_edit.text.toString().trim(),password_edit.text.toString().trim())
         }
 
     }

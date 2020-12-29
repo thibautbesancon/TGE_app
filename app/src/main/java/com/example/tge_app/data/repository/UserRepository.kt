@@ -4,6 +4,7 @@ import com.example.tge_app.data.local.DatabaseDao
 import com.example.tge_app.data.local.models.toData
 import com.example.tge_app.data.local.models.toEntity
 import com.example.tge_app.domain.entity.User
+import com.example.tge_app.domain.usecase.computeHash
 
 class UserRepository(
     private val databaseDao: DatabaseDao
@@ -13,8 +14,8 @@ class UserRepository(
         databaseDao.insert(user.toData())
     }
 
-    fun getUser(email: String) : User {
-        val userLocal = databaseDao.findByName(email)
-        return userLocal.toEntity()
+    fun getUser(email: String, password : String) : User? {
+        val userLocal = databaseDao.findByNameAndPassword(email,password)
+        return userLocal?.toEntity()
     }
 }
