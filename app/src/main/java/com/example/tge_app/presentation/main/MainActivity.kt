@@ -1,8 +1,9 @@
-package com.example.tge_app
+package com.example.tge_app.presentation.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
+import com.example.tge_app.R
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
 
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         main_button.setOnClickListener {
-            mainViewModel.onClickedIncrement()
+            mainViewModel.onClickedIncrement("")
         }
         mainViewModel.counter.observe(this, Observer {
             main_text.text = it.toString()
