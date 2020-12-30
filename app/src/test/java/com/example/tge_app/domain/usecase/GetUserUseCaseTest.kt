@@ -25,5 +25,6 @@ class GetUserUseCaseTest{
             //Then
             coVerify(exactly = 1) { userRepository.getUserAndPwp(email,pwd) }
         }
+
     }
 }
