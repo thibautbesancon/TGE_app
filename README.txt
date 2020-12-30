@@ -35,7 +35,7 @@ https://github.com/thibautbesancon/TGE_app.git
 ### Première écran
 * Main Screen au démarage de l'application, l'objectif était d'avoir acces a des fonctionnalité sans avoir besoin de se connecter.
 * Un menu en haut à droite permet d'accéder à la page de login
-<img src="https://github.com/thibautbesancon/TGE_app/blob/master/img_readme/Mainmenu.PNG" width="360" height="640" />
+<img src="https://raw.githubusercontent.com/thibautbesancon/TGE_app/master/img_readme/Mainmenu.PNG" width="360" height="640" />
 
 ### Login menu
 * Page de connection 
