@@ -51,8 +51,8 @@ class MembreList : Fragment() {
     private fun fetchData() {
         compositeDisposable.add(iMemberList.listMember.subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe{ membreDex ->
-                Common.membreList = membreDex.membre!!
+            .subscribe{ memberDex ->
+                Common.membreList = memberDex.membre!!
                 val adapter = MembreListAdapter(requireActivity(),Common.membreList)
 
                 recycler_view.adapter = adapter
