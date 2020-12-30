@@ -26,7 +26,7 @@
         <activity android:name=".presentation.main.LogActivity"/>
         <activity android:name=".presentation.main.CreateAccountActivity"/>
         <activity android:name=".presentation.main.Main_Activity"/>
-        <activity android:name=".presentation.main.MemberActivity"
+        <activity android:name=".presentation.main.Member_Activity"
             tools:ignore="Instantiatable" />
 
 

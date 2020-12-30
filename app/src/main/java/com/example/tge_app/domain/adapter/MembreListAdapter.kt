@@ -33,6 +33,6 @@ class MembreListAdapter(internal var context: Context,
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         Glide.with(context).load(memberList[position].photo).into(holder.img_member)
-        holder.txt_member.text = memberList[position].nom
+        holder.txt_member.text = memberList[position].nomffg
     }
 }

@@ -11,23 +11,22 @@ import com.example.tge_app.R
 import com.example.tge_app.data.local.Common.Common
 import com.example.tge_app.data.local.Common.ItemOffDecoration
 import com.example.tge_app.domain.adapter.MembreListAdapter
-import com.example.tge_app.domain.retrofit.IMembreList
 import com.example.tge_app.domain.retrofit.RetrofitClient
+import com.example.tge_app.domain.retrofit.iMembreList
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.fragment_membre_list.*
 
 
 class MembreList : Fragment() {
 
     internal var compositeDisposable = CompositeDisposable()
-    internal var iMemberList:IMembreList
+    internal var iMemberList:iMembreList
     internal lateinit var recycler_view: RecyclerView
 
     init {
         val retrofit=RetrofitClient.instance
-        iMemberList = retrofit.create(IMembreList::class.java)
+        iMemberList = retrofit.create(iMembreList::class.java)
     }
 
     override fun onCreateView(
@@ -49,7 +48,8 @@ class MembreList : Fragment() {
     }
 
     private fun fetchData() {
-        compositeDisposable.add(iMemberList.listMember.subscribeOn(Schedulers.io())
+        compositeDisposable.add(iMemberList.listMember
+            .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe{ memberDex ->
                 Common.membreList = memberDex.membre!!

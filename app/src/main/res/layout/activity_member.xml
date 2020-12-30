@@ -5,15 +5,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    tools:context=".presentation.main.Member_Activity">
+    tools:context=".presentation.main.Member_Activity"
+    android:orientation="horizontal">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolBar"
+        android:id="@+id/toolbar"
         android:minHeight="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        app:title="TGE Golf"
-        app:menu="@menu/top_app_bar3"
-        style="@style/Widget.MaterialComponents.Toolbar.Primary"
         app:titleTextColor="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
