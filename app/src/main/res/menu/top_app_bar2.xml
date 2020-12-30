@@ -7,5 +7,9 @@
             android:id="@+id/Login"
             android:title="Login"
             app:showAsAction="never" />
+        <item
+            android:id="@+id/Member"
+            android:title="Membre"
+            app:showAsAction="never" />
     </group>
 </menu>

@@ -22,9 +22,13 @@ class LogActivity : AppCompatActivity() {
                 is LoginSuccess->{
                     val monIntent =  Intent(this, Main_Activity::class.java)
                     startActivity(monIntent)
+                    login_edit.setText("")
+                    password_edit.setText("")
+
                 }
                 LoginError->{
                     MaterialAlertDialogBuilder(this)
+                        .setTitle("Oups !")
                         .setMessage("Login ou password incorrect")
                         .setPositiveButton("OK") { dialog, which ->
                             dialog.dismiss()

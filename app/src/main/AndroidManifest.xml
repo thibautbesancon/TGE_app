@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.tge_app"
     android:windowSoftInputMode="adjustResize">
 
@@ -12,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".presentation.main.Main_Activity">
+        <activity android:name=".presentation.main.Main_Activity_WtAccess">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,6 +22,10 @@
         </activity>
         <activity android:name=".presentation.main.LogActivity"/>
         <activity android:name=".presentation.main.CreateAccountActivity"/>
+        <activity android:name=".presentation.main.Main_Activity"/>
+        <activity android:name=".presentation.main.MemberActivity"
+            tools:ignore="Instantiatable" />
+
 
     </application>
 

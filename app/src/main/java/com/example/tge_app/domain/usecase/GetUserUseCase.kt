@@ -10,4 +10,8 @@ class GetUserUseCase(
         return userRepository.getUserAndPwp(email, password)
     }
 
+    suspend fun invoke2(email: String) : User?{
+        return userRepository.getUser(email)
+    }
+
 }
