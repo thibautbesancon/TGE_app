@@ -38,21 +38,27 @@ https://github.com/thibautbesancon/TGE_app.git
 <img src="https://raw.githubusercontent.com/thibautbesancon/TGE_app/master/img_readme/Mainmenu.PNG" width="360" height="640" />
 
 ### Login menu
-* Page de connection 
-* Animer l'image de la pokeball (une seule animation actuellement)
+* Page de connection avec un message Oups ! si login ou mot de passe incorrect
+* bouton créer un user
 <img src="https://github.com/thibautbesancon/TGE_app/blob/master/img_readme/loginmenu.PNG" width="360" height="640" />
-<img src="https://github.com/Rosutovein/Projet3A/blob/master/img_readme/Share.jpg" width="360" height="640" />
+<img src="https://github.com/thibautbesancon/TGE_app/blob/master/img_readme/logoups.PNG" width="310" />
 
-### Ecran du pokedex
-* Afficher la liste des pokemon avec une barre de recherche
-* Possibilité de raffraichir la liste avec un glissement vers le bas (swipe refresh)
-<img src="https://github.com/Rosutovein/Projet3A/blob/master/img_readme/PokedexActivity.jpg" width="360" height="640" />
-<img src="https://github.com/Rosutovein/Projet3A/blob/master/img_readme/Search.jpg" width="360" height="640" />
+### Create Account
+* Création de compte avec multiple protection. 
+* Entre autre, verification de mot de passe, vérification compte existant, vérification champ email bien rempli
+<img src="https://github.com/thibautbesancon/TGE_app/blob/master/img_readme/createmenu.PNG" width="360" height="640" />
+<img src="https://github.com/thibautbesancon/TGE_app/blob/master/img_readme/existoups.PNG" width="310" />
+<img src="https://github.com/thibautbesancon/TGE_app/blob/master/img_readme/loginoups.PNG" width="310" />
+<img src="https://github.com/thibautbesancon/TGE_app/blob/master/img_readme/passwordoups.PNG" width="310" />
 
-### Ecran du pokemon
-* Affiche les détails du pokemon sélectionné dans le pokedex
-<img src="https://github.com/Rosutovein/Projet3A/blob/master/img_readme/PokemonActivity.jpg" width="360" height="640" />
+### Password stocker hasher
+* Les mots de passe ne sont pas stocker en clair, ils sont hasher en Sha-256 et c'est leur Hash qui est stocker
+<img src="https://github.com/thibautbesancon/TGE_app/blob/master/img_readme/Chiffrement.PNG"/>
 
-### Notification push
+### Menu après log
+* affichage des fonctionnalité précedente plus accès au fonctionnalité privé
+<img src="https://github.com/thibautbesancon/TGE_app/blob/master/img_readme/mainlog.PNG" width="360" height="640" />
+
+### Voir plus loin,
 * Exemple de notification (Firebase)
 <img src="https://github.com/Rosutovein/Projet3A/blob/master/img_readme/NotifiationFirebase.jpg" width="360" height="640" />
