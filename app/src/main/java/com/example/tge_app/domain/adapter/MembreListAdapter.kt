@@ -11,8 +11,8 @@ import com.bumptech.glide.Glide
 import com.example.tge_app.R
 import com.example.tge_app.data.local.models.Membre
 
-class MemberListAdapter(internal var context: Context,
-                        var memberList: List<Membre>) : RecyclerView.Adapter<MemberListAdapter.MyViewHolder>() {
+class MembreListAdapter(internal var context: Context,
+                        var memberList: List<Membre>) : RecyclerView.Adapter<MembreListAdapter.MyViewHolder>() {
     inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         internal var img_member: ImageView
         internal var txt_member: TextView

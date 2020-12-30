@@ -4,7 +4,10 @@
     package="com.example.tge_app"
     android:windowSoftInputMode="adjustResize">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+        android:usesCleartextTraffic="true"
         android:name=".injection.EsieaApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

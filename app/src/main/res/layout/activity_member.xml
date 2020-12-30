@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"/>
 
     <fragment
-        android:name="com.example.tge_app.MembreList"
+        android:name="com.example.tge_app.data.local.MembreList"
         android:id="@+id/list_member_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

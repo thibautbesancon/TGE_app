@@ -5,7 +5,10 @@ import androidx.room.Room
 import com.example.projetandroid4a.domain.usecase.CreateUserUseCase
 import com.example.tge_app.data.local.AppDatabase
 import com.example.tge_app.data.local.DatabaseDao
+import com.example.tge_app.data.local.MembreList
+import com.example.tge_app.data.remote.Membres
 import com.example.tge_app.data.repository.UserRepository
+import com.example.tge_app.domain.adapter.MembreListAdapter
 import com.example.tge_app.domain.usecase.ComputeHash
 import com.example.tge_app.domain.usecase.GetUserUseCase
 import com.example.tge_app.presentation.main.CreateAccountModel
@@ -23,12 +26,14 @@ val domainModule : Module = module{
     factory { CreateUserUseCase(get()) }
     factory { GetUserUseCase(get()) }
     single { ComputeHash() }
+    single { MembreListAdapter(get(),get()) }
 }
 
 val dataModule : Module = module{
     single { UserRepository(get()) }
     single { createDataBase(androidContext()) }
-
+    single { Membres() }
+    single { MembreList() }
 }
 
 fun createDataBase(context: Context): DatabaseDao {

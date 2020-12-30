@@ -11,7 +11,7 @@ object RetrofitClient {
     get() {
         if(ourInstance == null)
             ourInstance = Retrofit.Builder()
-                .baseUrl()
+                .baseUrl("https://raw.githubusercontent.com/thibautbesancon/TGE_app/master/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
