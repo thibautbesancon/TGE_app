@@ -27,19 +27,20 @@ https://github.com/thibautbesancon/TGE_app.git
   * Page de menu non connecté
   * Gestion login
   * Gestion création compte
+  * Hashage des mots de passe
   
 
 ## Fonctionalités:
 
 ### Première écran
-* Splash Screen au démarage de l'application
-<img src="https://github.com/Rosutovein/Projet3A/blob/master/img_readme/SplashScreen.jpg" width="360" height="640" />
+* Main Screen au démarage de l'application, l'objectif était d'avoir acces a des fonctionnalité sans avoir besoin de se connecter.
+* Un menu en haut à droite permet d'accéder à la page de login
+<img src="https://github.com/thibautbesancon/TGE_app/blob/master/img_readme/Mainmenu.PNG" width="360" height="640" />
 
-### Ecran Home
-* Accéder au pokedex
-* Partager le lien du projet Github ou l'ouvrir direcetement sur le navigateur par défaut
+### Login menu
+* Page de connection 
 * Animer l'image de la pokeball (une seule animation actuellement)
-<img src="https://raw.githubusercontent.com/Rosutovein/Projet3A/master/img_readme/HomeActivity.jpg" width="360" height="640" />
+<img src="https://github.com/thibautbesancon/TGE_app/blob/master/img_readme/loginmenu.PNG" width="360" height="640" />
 <img src="https://github.com/Rosutovein/Projet3A/blob/master/img_readme/Share.jpg" width="360" height="640" />
 
 ### Ecran du pokedex
