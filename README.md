@@ -15,7 +15,7 @@ Cette application affiche la liste des membres du trophée des écoles et utilis
 https://github.com/thibautbesancon/TGE_app.git
 ```
 
-## Consignes respectées:
+## Consignes à respectées:
     ◦    Language Kotlin 
     ◦    Architecture MVVM
     ◦    Clean Architecture
