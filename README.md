@@ -15,7 +15,7 @@ Cette application affiche la liste des membres du trophée des écoles et utilis
 https://github.com/thibautbesancon/TGE_app.git
 ```
 
-## Consignes respectées:
+## Consignes à respectées:
     ◦    Language Kotlin 
     ◦    Architecture MVVM
     ◦    Clean Architecture
@@ -60,5 +60,5 @@ https://github.com/thibautbesancon/TGE_app.git
 <img src="https://github.com/thibautbesancon/TGE_app/blob/master/img_readme/mainlog.PNG" width="360" height="640" />
 
 ### Voir plus loin,
-* Exemple de notification (Firebase)
-<img src="https://github.com/Rosutovein/Projet3A/blob/master/img_readme/NotifiationFirebase.jpg" width="360" height="640" />
+* Une fonctionnalité qui aurais du etre présente est celle-ci, elle devait récuperer d'un dossier json les nom des membres du tge et les affichés sous une image des membres
+<img src="https://github.com/thibautbesancon/TGE_app/blob/master/img_readme/plusloin.png" width="360" height="640" />
